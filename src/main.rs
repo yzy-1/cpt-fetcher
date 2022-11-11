@@ -106,6 +106,7 @@ fn write_problem(
     OpenOptions::new()
       .write(true)
       .create(true)
+      .truncate(true)
       .open(dir.join("meta.yaml"))?,
     &HashMap::from([("problem", meta)]),
   )?;
